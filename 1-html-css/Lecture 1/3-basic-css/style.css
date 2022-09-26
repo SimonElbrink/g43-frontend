@@ -1,32 +1,37 @@
-        /* Body{} is a tag selector */
+/* Body{} is a tag selector */
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
+body {
+  font-family: Arial, Helvetica, sans-serif;
 
+  /*Extra color generater*/
 
-            /*Extra color generater*/
-            background: #FC466B;
-            /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #3F5EFB, #FC466B);
-            /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #3F5EFB, #FC466B);
-            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #8a2387; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #f27121,
+    #e94057,
+    #8a2387
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #f27121,
+    #e94057,
+    #8a2387
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 
-        }
+h1,
+h2 {
+  color: dark;
+  
+}
 
-        h1,
-        h2 {
-            color: #fa1900;
-        }
+#mainTitle {
+  font-size: 60px;
+  text-align: center;
+}
 
-        #mainTitle {
-            font-size: 60px;
-            text-align: center;
-
-        }
-
-
-        p {
-            font-size: small;
-            color: rgb(255, 255, 255)
-        }
+p {
+  font-size: small;
+  color: rgb(255, 255, 255);
+}
