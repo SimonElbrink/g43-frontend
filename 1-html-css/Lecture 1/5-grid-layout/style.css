@@ -1,3 +1,7 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
 .container {
   width: 1440px;
 
@@ -21,8 +25,49 @@
 
 .nav {
   grid-area: nav;
-
   background-color: lightsalmon;
+
+  /*Inner Grid*/
+  display: grid; 
+  grid-template-columns: 0.5fr 2fr 0.5fr; 
+  grid-template-rows: 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "logo link login"; 
+  grid-area: nav; 
+
+  justify-items: center;
+  align-items: center;
+
+}
+
+.logo{
+    grid-area: logo;
+}
+
+.link{
+    grid-area: link;
+
+}
+.link > ol{
+    list-style-type: none;    
+    text-transform: uppercase;
+    font-size: 0.7rem;
+}
+.link > ol > li{
+    float: left;
+    padding: 12px;
+
+}
+
+.login{
+    grid-area: login;
+}
+
+.login > a{
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
 .menu {
