@@ -42,17 +42,42 @@
 //JavaScript function
 // syntax function functionName(){}
 
-function display(){
-    console.log("display function has been triggered");
+// function display(){
+//     console.log("display function has been triggered");
+// }
+
+
+// function subtraction(num1, num2){
+//     return num1 - num2;
+// }
+
+// display(); // Calling function
+
+
+// var subtractionresult = subtraction(10,1); // Try= "50", "foo"
+// console.log(subtractionresult);
+
+
+
+// Operators in JS
+
+var n1 = 100;
+var n2 = "100";
+
+console.log(n1 == n2); // true  = compares content/value
+
+console.log(n1 === n2); // false = compares content of vaiable + checking type
+
+//If Statment
+if(n1 === n2){
+    console.log("Numbers are the same");
+}else{
+    console.log("Numbers are NOT the same");
 }
 
+// Ternary Operator  -> condition ? expression_1 : expression 2
 
-function subtraction(num1, num2){
-    return num1 - num2;
-}
+var resultOfOperator = (n1 === n2) ? "Numbers are the same" : "Numbers are NOT the same";
 
-display(); // Calling function
+console.log(resultOfOperator)
 
-
-var subtractionresult = subtraction(10,1); // Try= "50", "foo"
-console.log(subtractionresult);
