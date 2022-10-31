@@ -13,8 +13,9 @@
 
     <p>Some Content</p>
 
+    <script src="index.js"></script>
 
-    <script>
+    <!-- <script>
         //Access Content
         document.getElementById("hello")
             //Modifiting content
@@ -33,7 +34,33 @@
         //window.alert("Warning!");
 
         console.log("Hello in Console");
-    </script>
+    </script> -->
+
+    <hr>
+
+    <div id="firstName"></div>
+
+    <button onclick="document.getElementById('firstName').innerHTML = 'Test' " >Click To Display Name</button>
+
+    <br/>
+
+    <div id="date_time" >"TIME DATE"</div>
+
+    <button onclick="document.getElementById('date_time').innerHTML = Date() ">Click Me to Display Date & Time</button>
+
+    <br/>
+
+    <button onclick="document.getElementById('date_time').style.display='none' " >Click Me Hide Date & Time</button>
+
+    <br/>
+
+    <button
+    onclick="document.getElementById('date_time').style.color = 'red'"
+    
+    >Click Me to Add Color</button>
+
+    
+
 
 
 
