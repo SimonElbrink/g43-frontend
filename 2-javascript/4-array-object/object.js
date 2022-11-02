@@ -20,7 +20,9 @@ const volvoCar = {
     brand: "Volvo",
     model: "XC60",
     year: 2022,
-    color: "grey"
+    color: "grey",
+
+    profile_URL: "http://www.volvo.se/model/xc60_pic.jpg"
 }
 
 // ... a Spread operator = makes a clode of the object.
