@@ -46,10 +46,6 @@
                     document.getElementById("message").hidden = true;
                     document.getElementById("message").innerHTML = "";
                 }
-
-
-
-
             }
         </script>
 
@@ -90,9 +86,6 @@
                     return htmlRow;
                 })
 
-
-
-
                 const tbody = document.createElement('tbody');
 
                 tbody.innerHTML = tablesRows.join("");
@@ -100,18 +93,18 @@
             }
 
             const personList = [
-                {id:1, name: "Test1"},
-                {id:2, name: "Test2"},
-                {id:3, name: "Test3"},
-                {id:4, name: "Test4"},
-                {id:5, name: "Test5"},
+                {id:1, name: "Simon"},
+                {id:2, name: "Kent"},
+                {id:3, name: "Marcus"},
+                {id:4, name: "Mehrdad"},
+                {id:5, name: "Åsa"}
             ];
 
             generateRows(personList);
 
         </script>
 
-        <h2>Ex3 - Validationg Input</h2>
+        <h2>Ex3 - Validation Input</h2>
         <form class="form-control">
             <input type="text" id="email" name="email" placeholder="enter a valid email" class="form-control" />
             <p id="emailValidationMessage"></p>
@@ -122,6 +115,26 @@
 
                 function validateEmail() {
                     const regexForEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+                    let email = document.getElementById("email").value;
+                    console.log(email);
+                    
+                    let validationMessage = document.getElementById("emailValidationMessage");
+
+                    if(regexForEmail.test(email)){
+                        //Email was valid
+                        console.log("Email was valid");
+
+                        validationMessage.innerHTML = "Email was valid";
+                        validationMessage.style.color = "green";
+
+                    }else{
+                        //Email was invalid
+                        console.log("Email was invalid");
+
+                        validationMessage.innerHTML = "Email was Invalid";
+                        validationMessage.style.color = "red";
+                    }
 
                 }
 
