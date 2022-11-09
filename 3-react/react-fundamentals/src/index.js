@@ -9,6 +9,7 @@ import AFMain from './ex3-arrow-function-component/AFMain';
 import Table from './ex4-table/Table';
 import StylingExample from './ex5-styling/StylingExample';
 import TableStyled from './ex5-styling/TableStyled';
+import Namelist from './ex6-variables-functions/Namelist';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -17,4 +18,4 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 //const messageJSX = <h1>Hello Group 43!!</h1>;
 
-root.render(<TableStyled/>);
+root.render(<Namelist/>);
