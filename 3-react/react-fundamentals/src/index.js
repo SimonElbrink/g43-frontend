@@ -12,6 +12,8 @@ import TableStyled from './ex5-styling/TableStyled';
 import Namelist from './ex6-variables-functions/Namelist';
 import NameListProps from './ex7-props/NameListProps';
 import MenuList from './ex7-props/MenuList';
+import Cars from './ex8-state/Cars';
+import Product from './ex8-state/Product';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -25,11 +27,11 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 //root.render(<NameListProps names={listOfNames}  />);
 
 
- const links = [
-     {id: 1, name: "lexicon", url:"http://www.lexicon.se"},
-     {id:2 , name: 'Oracle', url: 'https://www.oracle.com'},
-     {id:3 , name: 'Google', url: 'https://www.google.com'}
- ];
+// const links = [
+//     {id: 1, name: "lexicon", url:"http://www.lexicon.se"},
+//     {id:2 , name: 'Oracle', url: 'https://www.oracle.com'},
+//     {id:3 , name: 'Google', url: 'https://www.google.com'}
+// ]
 
 
-root.render(<MenuList links={links} />);
+root.render(<Product/>);
