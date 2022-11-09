@@ -10,6 +10,8 @@ import Table from './ex4-table/Table';
 import StylingExample from './ex5-styling/StylingExample';
 import TableStyled from './ex5-styling/TableStyled';
 import Namelist from './ex6-variables-functions/Namelist';
+import NameListProps from './ex7-props/NameListProps';
+import MenuList from './ex7-props/MenuList';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -18,4 +20,16 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 //const messageJSX = <h1>Hello Group 43!!</h1>;
 
-root.render(<Namelist/>);
+
+//const listOfNames = ["Mehrdad Javan", "Simon Elbrink"];
+//root.render(<NameListProps names={listOfNames}  />);
+
+
+ const links = [
+     {id: 1, name: "lexicon", url:"http://www.lexicon.se"},
+     {id:2 , name: 'Oracle', url: 'https://www.oracle.com'},
+     {id:3 , name: 'Google', url: 'https://www.google.com'}
+ ];
+
+
+root.render(<MenuList links={links} />);
