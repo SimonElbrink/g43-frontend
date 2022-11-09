@@ -1,4 +1,5 @@
 import React from 'react';
+import './table.css'; {/* Don't forget to import css file.*/}
 
 
 
@@ -38,12 +39,13 @@ const TableBody = () => {
     );
 }
 
+{/* Styling by Classes*/}
 const TableAction = () => {
     return (
         <>
-            <button>Details</button>
-            <button>Delete</button>
-            <button>Edit</button>
+            <button className='details-btn' >Details</button>
+            <button className='delete-btn'>Delete</button>
+            <button className='edit-btn'>Edit</button>
         </>
     );
 }
