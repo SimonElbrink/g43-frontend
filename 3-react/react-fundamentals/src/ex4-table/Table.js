@@ -1,5 +1,5 @@
 import React from 'react';
-import './table.css'; {/* Don't forget to import css file.*/}
+//import './table.css'; {/* Don't forget to import css file.*/}
 
 
 
@@ -43,9 +43,9 @@ const TableBody = () => {
 const TableAction = () => {
     return (
         <>
-            <button className='details-btn' >Details</button>
-            <button className='delete-btn'>Delete</button>
-            <button className='edit-btn'>Edit</button>
+            <button className='btn btn-primary' >Details</button>
+            <button className='btn btn-danger'>Delete</button>
+            <button className='btn btn-warning'>Edit</button>
         </>
     );
 }
@@ -56,7 +56,7 @@ const TableAction = () => {
 const Table = () => {
     return (
         <div>
-            <table border="1">
+            <table className='table table-dark table-striped' border="1">
                 <TableHeader />
                 <TableBody />
             </table>
