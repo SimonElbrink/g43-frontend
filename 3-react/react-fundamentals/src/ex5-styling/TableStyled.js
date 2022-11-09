@@ -1,4 +1,7 @@
 import React from 'react';
+//import './table.css'; {/* Don't forget to import css file.*/}
+
+
 
 const TableHeader = () => {
     return (
@@ -40,9 +43,9 @@ const TableBody = () => {
 const TableAction = () => {
     return (
         <>
-            <button>Details</button>
-            <button>Delete</button>
-            <button>Edit</button>
+            <button className='btn btn-primary' >Details</button>
+            <button className='btn btn-danger'>Delete</button>
+            <button className='btn btn-warning'>Edit</button>
         </>
     );
 }
@@ -53,7 +56,7 @@ const TableAction = () => {
 const Table = () => {
     return (
         <div>
-            <table border="1">
+            <table className='table table-dark table-striped' border="1">
                 <TableHeader />
                 <TableBody />
             </table>
