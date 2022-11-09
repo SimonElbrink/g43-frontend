@@ -14,6 +14,7 @@ import NameListProps from './ex7-props/NameListProps';
 import MenuList from './ex7-props/MenuList';
 import Cars from './ex8-state/Cars';
 import Product from './ex8-state/Product';
+import Counter from './ex9-event/Counter';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -34,4 +35,4 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // ]
 
 
-root.render(<Product/>);
+root.render(<Counter/>);
