@@ -17,6 +17,8 @@ import Product from './ex8-state/Product';
 import Counter from './ex9-event/Counter';
 import Person from './ex9-event/Person';
 import UseEffectExample from './ex10-useEffect/UseEffectExample';
+import PersonForm from './ex11-validate-form/PersonForm';
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -37,4 +39,4 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // ]
 
 
-root.render(<UseEffectExample/>);
+root.render(<PersonForm/>);
