@@ -19,6 +19,7 @@ import Person from './ex9-event/Person';
 import UseEffectExample from './ex10-useEffect/UseEffectExample';
 import PersonForm from './ex11-validate-form/PersonForm';
 import AxiosApp from './ex13-axios/AxiosApp';
+import AppRouter from './ex14-router/AppRouter';
 
 
 
@@ -40,4 +41,4 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // ]
 
 
-root.render(<AxiosApp/>);
+root.render(<AppRouter/>);
