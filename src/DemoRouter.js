@@ -1,6 +1,7 @@
 //rsc - Creates a stateless React component
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
+import CrudDemo from './CrudDemo';
 
 // DemoRouter Component
 const DemoRouter = () => {
@@ -11,12 +12,13 @@ const DemoRouter = () => {
                 <Header />
 
                 <Routes>
-                    <Route path='/' element={<Welcome />} />
-                    <Route path='about' element={<About />} />
-                    <Route path='home' element={<Home />} />
-                    <Route path='person' element={<Person />} />
-                    <Route path='error' element={<NotFound />} />
-                    <Route path='*' element={<Navigate to={'/error'} />} /> {/* All other paths will show Error page */}
+                    <Route path='/' element={<Welcome/>} />
+                    <Route path='about' element={<About/>} />
+                    <Route path='home' element={<Home/>} />
+                    <Route path='person' element={<Person/>} />
+                    <Route path='crud' element={<CrudDemo/>} />
+                    <Route path='error' element={<NotFound/>} />
+                    <Route path='*' element={<Navigate to={'/error'}/>} /> {/* All other paths will show Error page */}
                 </Routes>
             </Router>
 
@@ -27,7 +29,7 @@ const DemoRouter = () => {
 //Navigation Component
 const Header = () =>{
     return(
-    <header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+    <nav className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
 
         <Link to={'/'} className='d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none'>
             🧰 Welcome
@@ -43,6 +45,9 @@ const Header = () =>{
             <li className='nav-item'>
                 <Link className='nav-link' to={'about'}>About</Link>
             </li>
+            <li className='nav-item'>
+                <Link className='nav-link' to={'crud'}>CRUD</Link>
+            </li>
 
         </ul>
 
@@ -50,7 +55,7 @@ const Header = () =>{
             <Link to={"/login"} className="btn btn-outline-primary me-2">Login</Link>
             <Link to={"/signup"} className="btn btn-primary">Sign-up</Link>
         </div>
-    </header>
+    </nav>
     )}
 
 
