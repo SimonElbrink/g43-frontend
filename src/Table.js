@@ -4,6 +4,9 @@ import { useNavigate} from 'react-router-dom';
 const Table = (props) => {
     const navigate = useNavigate();
 
+    //Function From CrudDemo Component
+    const handleDelete = props.handleDelete;
+
 
     const TableHeader = () => {
         return (
@@ -40,7 +43,7 @@ const Table = (props) => {
         return (
             <div>
                 <button type="button" className='btn btn-primary' onClick={() => navigate(`/details/${props.id}`)}>Details</button>
-                <button type="button" className='btn btn-danger mx-1'>Delete</button>
+                <button type="button" className='btn btn-danger mx-1' onClick={() => handleDelete(props.id)}>Delete</button>
                 <button type="button" className='btn btn-warning'>Edit</button>
             </div>
         )

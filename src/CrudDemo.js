@@ -7,10 +7,11 @@ const CrudDemo = () => {
     const API_URL = "http://localhost:8080/api/v1/person";
 
     const [persons, setPersons] = useState([]);
+    const [loadData, setLoadData] = useState(false);
 
     useEffect(() => {
         getAllData();
-    }, []);
+    }, [loadData]);
 
     const getAllData = async () => {
         await axios.get(API_URL).then(
@@ -31,10 +32,29 @@ const CrudDemo = () => {
         })
     }
 
+    const deletePersonByID = async (id) => {
+        await axios.delete(`${API_URL}/${id}`).then(
+            (response) => {
+
+                if (response.status === 204) {
+                    console.log(`API: (Delete) Request was executed Successfully!`);
+
+                    setLoadData(!loadData)
+
+                } else {
+                    console.error(`API: Request was executed with status code ${response.status}`);
+                }
+
+            }
+        ).catch((error) => {
+            console.warn(`API: Request Encounter an Error ${error}`);
+        })
+    }
+
 
     return (
         <div>
-            <Table data={persons} />
+            <Table data={persons} handleDelete={deletePersonByID}/>
 
         </div>
     );
