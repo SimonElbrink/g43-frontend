@@ -1,6 +1,8 @@
 import React from 'react';
+import { useNavigate} from 'react-router-dom';
 
 const Table = (props) => {
+    const navigate = useNavigate();
 
 
     const TableHeader = () => {
@@ -25,7 +27,7 @@ const Table = (props) => {
                             <th scope="row">{person.id}</th>
                             <td>{`${person.firstName} ${person.lastName}`}</td>
                             <td>{person.email}</td>
-                            <td><TableAction /></td>
+                            <td><TableAction id={person.id}/></td>
                         </tr>
                     )
                 })}
@@ -34,10 +36,10 @@ const Table = (props) => {
         )
     }
 
-    const TableAction = () => {
+    const TableAction = (props) => {
         return (
             <div>
-                <button type="button" className='btn btn-primary'>Details</button>
+                <button type="button" className='btn btn-primary' onClick={() => navigate(`/details/${props.id}`)}>Details</button>
                 <button type="button" className='btn btn-danger mx-1'>Delete</button>
                 <button type="button" className='btn btn-warning'>Edit</button>
             </div>
@@ -53,6 +55,9 @@ const Table = (props) => {
         </div>
     );
 };
+
+
+
 
 
 export default Table;

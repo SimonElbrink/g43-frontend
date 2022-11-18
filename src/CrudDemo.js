@@ -17,10 +17,10 @@ const CrudDemo = () => {
             (response) => {
 
                 if (response.status === 200) {
-                    console.log(`API: Request was executed Successfully!`);
+                    console.log(`API: (All) Request was executed Successfully!`);
 
                     setPersons(response.data);
-                    console.table(persons); 
+                    console.table(response.data);
                 } else {
                     console.error(`API: Request was executed with status code ${response.status}`);
                 }
@@ -30,6 +30,7 @@ const CrudDemo = () => {
             console.warn(`API: Request Encounter an Error ${error}`);
         })
     }
+
 
     return (
         <div>

@@ -2,6 +2,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
 import CrudDemo from './CrudDemo';
+import PersonDetails from './PersonDetails';
 
 // DemoRouter Component
 const DemoRouter = () => {
@@ -17,6 +18,7 @@ const DemoRouter = () => {
                     <Route path='home' element={<Home/>} />
                     <Route path='person' element={<Person/>} />
                     <Route path='crud' element={<CrudDemo/>} />
+                    <Route path='details/:id' element={<PersonDetails/>} />
                     <Route path='error' element={<NotFound/>} />
                     <Route path='*' element={<Navigate to={'/error'}/>} /> {/* All other paths will show Error page */}
                 </Routes>
