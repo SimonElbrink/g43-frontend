@@ -13,14 +13,14 @@ const DemoRouter = () => {
                 <Header />
 
                 <Routes>
-                    <Route path='/' element={<Welcome/>} />
-                    <Route path='about' element={<About/>} />
-                    <Route path='home' element={<Home/>} />
-                    <Route path='person' element={<Person/>} />
-                    <Route path='crud' element={<CrudDemo/>} />
-                    <Route path='details/:id' element={<PersonDetails/>} />
-                    <Route path='error' element={<NotFound/>} />
-                    <Route path='*' element={<Navigate to={'/error'}/>} /> {/* All other paths will show Error page */}
+                    <Route exact path='/' element={<Welcome/>} />
+                    <Route path='/about' element={<About/>} />
+                    <Route path='/home' element={<Home/>} />
+                    <Route path='/person' element={<Person/>} />
+                    <Route path='/crud' element={<CrudDemo/>} />
+                    <Route path='/details/:id' element={<PersonDetails/>} />
+                    <Route path='/error' element={<NotFound/>} />
+                    <Route path='/*' element={<Navigate to={'/error'}/>} /> {/* All other paths will show Error page */}
                 </Routes>
             </Router>
 
@@ -54,8 +54,8 @@ const Header = () =>{
         </ul>
 
         <div className="col-md-3 text-end">
-            <Link to={"/login"} className="btn btn-outline-primary me-2">Login</Link>
-            <Link to={"/signup"} className="btn btn-primary">Sign-up</Link>
+            <Link to={"/login"} className="btn btn-outline-primary me-2 disabled">Login</Link>
+            <Link to={"/signup"} className="btn btn-primary disabled">Sign-up</Link>
         </div>
     </nav>
     )}
